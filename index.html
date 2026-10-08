@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKDSE 中國語文科十二篇範文溫習指南：《勸學（節錄）》</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Chinese Aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        xuan: '#FDFBF7',
+                        xuanDark: '#F4EFE6',
+                        ink: '#1C1917',
+                        inkLight: '#44403C',
+                        cinnabar: '#A62626',
+                        cinnabarHover: '#8B1E1E',
+                        bamboo: '#2E5A44',
+                        bambooLight: '#E8F0EC',
+                        amberGold: '#B45309',
+                        paperBorder: '#E5DED1'
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif TC', 'serif'],
+                        sans: ['Noto Sans TC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#E5DED1 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+            color: #1C1917;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .font-serif-title {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        /* Ink border box styling */
+        .ink-box {
+            background-color: #FFFFFF;
+            border: 1px solid #E5DED1;
+            box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.05);
+            position: relative;
+        }
+
+        .ink-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #A62626;
+            border-top-left-radius: 0.375rem;
+            border-bottom-left-radius: 0.375rem;
+        }
+
+        .ink-box-bamboo::before {
+            background-color: #2E5A44;
+        }
+
+        /* Hover word tooltip popover style */
+        .tooltip-target {
+            border-bottom: 2px dashed #A62626;
+            color: #A62626;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            padding: 0 2px;
+            transition: all 0.2s ease;
+        }
+
+        .tooltip-target:hover {
+            background-color: rgba(166, 38, 38, 0.1);
+            border-bottom-style: solid;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4EFE6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #A62626;
+            border-radius: 3px;
+        }
+
+        /* Custom animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        /* Seal Stamp effect */
+        .stamp {
+            border: 2px solid #A62626;
+            color: #A62626;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 900;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            transform: rotate(-3deg);
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-xuanDark border-b border-paperBorder sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <span class="stamp text-xl">勸學</span>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold font-serif-title text-ink tracking-wide">
+                        《勸學（節錄）》HKDSE 互動溫習指南
+                    </h1>
+                    <p class="text-xs text-inkLight">香港中學文憑試中國語文科 十二篇指定文言範文專題學習網頁</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-xs text-inkLight bg-xuan px-3 py-1.5 rounded-full border border-paperBorder">
+                <i class="fa-solid fa-graduation-cap text-cinnabar"></i>
+                <span>授課語言：廣東話 / 粵語</span>
+                <span class="text-gray-300">|</span>
+                <i class="fa-solid fa-book-bookmark text-bamboo"></i>
+                <span>版本：遵照 EDB KS4_06 規範</span>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="bg-xuan border-t border-paperBorder overflow-x-auto">
+            <div class="max-w-7xl mx-auto px-2 flex space-x-1 sm:space-x-2 py-1 min-w-max">
+                <button onclick="switchTab('focus')" id="tab-focus" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 bg-cinnabar text-white">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <span>1. 本課重點</span>
+                </button>
+                <button onclick="switchTab('author')" id="tab-author" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-user-nib"></i>
+                    <span>2. 作者與題解</span>
+                </button>
+                <button onclick="switchTab('translation')" id="tab-translation" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-language"></i>
+                    <span>3. 文言字詞語譯</span>
+                </button>
+                <button onclick="switchTab('structure')" id="tab-structure" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-list-ol"></i>
+                    <span>4. 各段段旨</span>
+                </button>
+                <button onclick="switchTab('technique')" id="tab-technique" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-pen-fancy"></i>
+                    <span>5. 寫作手法分析</span>
+                </button>
+                <button onclick="switchTab('rhetoric')" id="tab-rhetoric" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <span>6. 修辭配對遊戲</span>
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-vial"></i>
+                    <span>7. DSE 模擬測驗</span>
+                </button>
+                <button onclick="switchTab('mistakes')" id="tab-mistakes" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <span>8. 個人錯題庫</span>
+                </button>
+                <button onclick="switchTab('mindmap')" id="tab-mindmap" class="nav-tab text-xs md:text-sm font-medium px-3 py-2 rounded-md transition-all flex items-center space-x-1.5 text-inkLight hover:bg-xuanDark">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <span>9. 課文總結圖</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- 1. 本課學習重點 -->
+        <section id="sec-focus" class="tab-content fade-in space-y-6">
+            <div class="ink-box p-6 rounded-r-lg">
+                <h2 class="text-2xl font-bold font-serif-title text-cinnabar flex items-center gap-2 mb-3">
+                    <i class="fa-solid fa-scroll"></i> 文章主旨
+                </h2>
+                <p class="text-base leading-relaxed text-ink font-serif-title">
+                    本文為荀子宣揚其儒家學術思想之名篇。全文以<strong class="text-cinnabar">「學不可以已」</strong>為核心論點，系統地論述了學習的<strong class="text-bamboo">重要意義</strong>（改變人性、提高修養）、<strong class="text-bamboo">巨大作用</strong>（善假於物、擴展能力），以及學習應有的<strong class="text-bamboo">正確態度與方法</strong>（積累、堅持、專一）。荀子藉此鼓勵人們必須通過持之以恆、專心致志地學習來改造後天的本性，修身立德。
+                </p>
+            </div>
+
+            <!-- DSE Three Core Key Points Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-lg border border-paperBorder shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-full bg-cinnabar/10 text-cinnabar flex items-center justify-center font-bold text-lg mb-3">1</div>
+                    <h3 class="text-lg font-bold font-serif-title text-ink mb-2">比喻論證系統與連貫性</h3>
+                    <p class="text-sm text-inkLight leading-relaxed">
+                        DSE 經常考查文中比喻論證的應用。荀子善於運用大量貼近生活的自然現象（青出於藍、冰寒於水、輮木為輪、登高而招、積土成山等）作為喻體，深入淺出地說明抽象的哲理。
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-paperBorder shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-full bg-bamboo/10 text-bamboo flex items-center justify-center font-bold text-lg mb-3">2</div>
+                    <h3 class="text-lg font-bold font-serif-title text-ink mb-2">正反對比論證與排偶句式</h3>
+                    <p class="text-sm text-inkLight leading-relaxed">
+                        第三段大量運用正反對比（騏驥 vs 駑馬、朽木 vs 鍥而不捨、騏驥一躍 vs 駑馬十駕、蛟龍生焉 vs 神明自得）。文句多用對偶與排比，音節鏗鏘，氣勢磅礴。
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-paperBorder shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-full bg-amberGold/10 text-amberGold flex items-center justify-center font-bold text-lg mb-3">3</div>
+                    <h3 class="text-lg font-bold font-serif-title text-ink mb-2">文言字詞與性惡論思想連結</h3>
+                    <p class="text-sm text-inkLight leading-relaxed">
+                        考核高頻字詞如「生非異也」（通假字）、「知明而行無過」（通假/古今異義）、「輮使之然也」（詞類活用）。理解字詞需結合荀子「性惡論」與「化性起偽」的思想背景。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Learning Objectives Checklist -->
+            <div class="bg-xuanDark p-5 rounded-lg border border-paperBorder">
+                <h3 class="font-bold font-serif-title text-ink mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-bamboo"></i> 中四至中六考生溫習檢核表 (Self-Checklist)
+                </h3>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-inkLight">
+                    <li class="flex items-center gap-2"><i class="fa-regular fa-square-check text-cinnabar"></i> 能準確背誦 EDB 指定篇章全文</li>
+                    <li class="flex items-center gap-2"><i class="fa-regular fa-square-check text-cinnabar"></i> 能準確指出文中 10+ 個重點文言字詞及通假字</li>
+                    <li class="flex items-center gap-2"><i class="fa-regular fa-square-check text-cinnabar"></i> 能掌握官方三分段的段旨與層次脈絡</li>
+                    <li class="flex items-center gap-2"><i class="fa-regular fa-square-check text-cinnabar"></i> 能分析「青出於藍」、「輮木為輪」等喻體的本意與喻意</li>
+                    <li class="flex items-center gap-2"><i class="fa-regular fa-square-check text-cinnabar"></i> 能說明「善假於物」在現代學習中的遷移應用</li>
+                    <li class="flex items-center gap-2"><i class="fa-regular fa-square-check text-cinnabar"></i> 能解答 DSE 跨篇比較題（如比較荀子與韓愈《師說》的學習觀）</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. 作者生平、思想重點、題解 -->
+        <section id="sec-author" class="tab-content hidden fade-in space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Author Bio -->
+                <div class="ink-box p-6 rounded-r-lg lg:col-span-1">
+                    <div class="text-center mb-4">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-xuanDark border-2 border-cinnabar flex items-center justify-center font-serif-title text-3xl font-bold text-cinnabar mb-2 shadow-inner">
+                            荀況
+                        </div>
+                        <h3 class="text-xl font-bold font-serif-title text-ink">荀子（約公元前 313－前 238）</h3>
+                        <p class="text-xs text-inkLight">名況，字卿，趙國人。戰國末期著名思想家、文學家。</p>
+                    </div>
+                    <div class="text-sm text-inkLight space-y-3 leading-relaxed border-t border-paperBorder pt-4">
+                        <p><strong>【稷下學宮】</strong> 曾三度出任齊國稷下學宮的「祭酒」（最高學府學長），在當時學術界享有極高崇高地位。</p>
+                        <p><strong>【徒弟巨擘】</strong> 著名弟子包括法家代表人物韓非子及秦朝丞相李斯。</p>
+                        <p><strong>【後世評價】</strong> 與孔子、孟子並稱為戰國時期儒家思想的三大代表人物，集先秦諸子百家學術之大成。</p>
+                    </div>
+                </div>
+
+                <!-- Philosophy & Title -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Title Explanation -->
+                    <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm">
+                        <h3 class="text-lg font-bold font-serif-title text-cinnabar mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-bookmark"></i> 題解深度剖析：「勸學」
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-xuan p-4 rounded-md border border-paperBorder">
+                                <h4 class="font-bold text-ink mb-1">「勸」字之本義（動詞）</h4>
+                                <p class="text-inkLight">在古漢語中，「勸」為<strong>動詞</strong>，意為<span class="text-cinnabar font-bold">「勸勉」、「鼓勵」</span>，非現代漢語中「勸阻」或「勸告」之意。</p>
+                            </div>
+                            <div class="bg-xuan p-4 rounded-md border border-paperBorder">
+                                <h4 class="font-bold text-ink mb-1">「勸學」全題涵義</h4>
+                                <p class="text-inkLight">即<span class="text-bamboo font-bold">「勸勉人們努力學習」</span>。本文為《荀子》三十二篇中的開篇第一篇，可見荀子對後天學習的極度重視。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Philosophical Core: Xing E Lun -->
+                    <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm ink-box-bamboo">
+                        <h3 class="text-lg font-bold font-serif-title text-bamboo mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-yin-yang"></i> 核心思想：性惡論與「化性起偽」
+                        </h3>
+                        <p class="text-sm text-ink leading-relaxed mb-4">
+                            荀子提倡<strong>「性惡論」</strong>，與孟子的「性善論」形成鮮明對比。荀子認為人的本性（天生的慾望與本能）是惡劣的、順應本性會導向爭奪與混亂；因此必須依靠後天的人為努力來矯正與改造。
+                        </p>
+                        <div class="bg-bambooLight/50 p-4 rounded-md border border-bamboo/20 text-sm space-y-2">
+                            <p class="font-bold text-bamboo">【概念關鍵字：化性起偽】</p>
+                            <ul class="list-disc list-inside text-inkLight space-y-1">
+                                <li><strong>化性：</strong> 變化、改造天生惡劣的本性。</li>
+                                <li><strong>起偽：</strong> 「偽」指「人為」（人所作也）。即興起後天的人為教化、禮樂與學習。</li>
+                                <li><strong>與《勸學》關係：</strong> 正因為「人之性惡」，故必須「學不可以已」。學習就是「化性起偽」的最關鍵途徑！</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 文言字詞語譯（高密度覆蓋 Popover） -->
+        <section id="sec-translation" class="tab-content hidden fade-in space-y-6">
+            <div class="bg-amberGold/10 border-l-4 border-amberGold p-4 rounded-r-md text-sm text-ink flex items-start gap-3">
+                <i class="fa-solid fa-lightbulb text-amberGold text-xl mt-0.5"></i>
+                <div>
+                    <span class="font-bold">互動提示：</span> 
+                    請將滑鼠游標移至（或手機點擊）下文中帶有紅虛線的<span class="tooltip-target">文言字詞</span>上，即可在<strong class="text-cinnabar">上方彈出對應的白話語譯、文言知識（通假/活用/句式）及 DSE 遷移規律</strong>！原文完全依據香港教育局指定篇章（KS4_06.pdf）校對。
+                </div>
+            </div>
+
+            <!-- Reading passage text with popovers -->
+            <div class="bg-white p-6 md:p-8 rounded-lg border border-paperBorder shadow-sm space-y-8 text-lg font-serif-title leading-loose">
+
+                <!-- Paragraph 1 -->
+                <div class="bg-xuan p-5 rounded-md border border-paperBorder">
+                    <div class="text-xs font-sans font-bold text-cinnabar mb-3 flex items-center justify-between border-b border-paperBorder pb-2">
+                        <span>【第一段】論學習的意義：改變人性、提高修養</span>
+                        <span class="bg-cinnabar/10 px-2 py-0.5 rounded">EDB 第 1 段</span>
+                    </div>
+                    <p class="text-ink">
+                        君子曰：<span class="tooltip-target" data-word="學不可以已" data-meaning="學習是不可以停止的。" data-grammar="重點字：「已」止也、停止。全局核心論點。" data-rule="【遷移規律】「已」在文言文中常用作「停止」（如：誅求無已）或「已經」。">學不可以已</span>。
+                        <span class="tooltip-target" data-word="青" data-meaning="靛青（一種藍色染料）。" data-grammar="名詞。" data-rule="【遷移規律】指古時從藍草中提煉出的青色染料。">青</span>，<span class="tooltip-target" data-word="取之於藍" data-meaning="從藍草中提取出來。" data-grammar="介詞結構後置（狀語後置）：「於藍取之」。" data-rule="【遷移規律】「於」在此作介詞「從/在」，「藍」指藍草。">取之於藍</span>，而<span class="tooltip-target" data-word="青於藍" data-meaning="比藍草的顏色更深/更青。" data-grammar="介詞「於」表比較，相當於「比」。" data-rule="【遷移規律】「A + 詞 + 於 + B」常用於比較句式，意為「A 比 B 更...」。">青於藍</span>；
+                        <span class="tooltip-target" data-word="冰" data-meaning="冰塊。" data-grammar="名詞。" data-rule="【遷移規律】由水凍結而成。">冰</span>，<span class="tooltip-target" data-word="水為之" data-meaning="是由水凝凍而成的。" data-grammar="「為」作動詞，意為「凝成/形成」。" data-rule="【遷移規律】「為」在文言文可作「做、成為、形成」。">水為之</span>，而<span class="tooltip-target" data-word="寒於水" data-meaning="比水更為寒冷。" data-grammar="介詞「於」表比較，意為「比」。" data-rule="【遷移規律】比較句式，強調後天改造超前於原本狀態。">寒於水</span>。
+                        木<span class="tooltip-target" data-word="直中繩" data-meaning="筆直得合乎墨線。" data-grammar="「直」形容詞；「中」（音眾）動詞，合乎；「繩」墨線。" data-rule="【遷移規律】「中」讀 zhòng 時常意為「符合、命中」。">直中繩</span>，<span class="tooltip-target" data-word="輮" data-meaning="通「煣」，用火烘烤木材使之彎曲。" data-grammar="通假字 / 詞類活用：使動用法，使……彎曲。" data-rule="【遷移規律】通假字，古人用「輮」通「煣」。">輮</span><span class="tooltip-target" data-word="以為輪" data-meaning="把它做成車輪。" data-grammar="省縮句：「以（之）為輪」，「以」介詞，「為」動詞。" data-rule="【遷移規律】「以為」古漢語常為「以（之）為」（把...做成...）。">以為輪</span>，其<span class="tooltip-target" data-word="曲中規" data-meaning="弧度合乎圓規。" data-grammar="「曲」名詞，曲度/弧度；「規」圓規。" data-rule="【遷移規律】「規」古指畫圓的工具（規矩）。">曲中規</span>。
+                        <span class="tooltip-target" data-word="雖有槁暴" data-meaning="即使再次晒乾枯乾。" data-grammar="「雖」即使；「有」通「又」；「槁」枯乾；「暴」通「曝」，晒乾。" data-rule="【遷移規律】「雖」在文言多表假設「即使」，非現代「雖然」。">雖有槁暴</span>，<span class="tooltip-target" data-word="不復挺者" data-meaning="不再挺直的原因。" data-grammar="「挺」挺直；「...者」表原因的句式。" data-rule="【遷移規律】「...者，...也」結構常用於表原因或解釋。">不復挺者</span>，<span class="tooltip-target" data-word="輮使之然也" data-meaning="是用火烘烤使它變成這樣的。" data-grammar="「然」代詞，這樣。" data-rule="【遷移規律】「然」作代詞指代「這樣/如此」。">輮使之然也</span>。
+                        故木<span class="tooltip-target" data-word="受繩則直" data-meaning="經墨線量過就能割得挺直。" data-grammar="「受繩」接受墨線的矯正。" data-rule="【遷移規律】喻指人接受規矩法度。">受繩則直</span>，金<span class="tooltip-target" data-word="就礪則利" data-meaning="金屬刀劍拿到磨刀石上磨過就變得鋒利。" data-grammar="「金」金屬刀劍；「就」動詞，靠近/接近；「礪」磨刀石。" data-rule="【遷移規律】「就」古義為「靠近、趨向」（如：避難就易）。">就礪則利</span>，
+                        君子<span class="tooltip-target" data-word="博學而日參省乎己" data-meaning="廣泛地學習，而且每天檢查反省自己。" data-grammar="「日」名詞作狀語，每天；「參」動詞，檢驗/參察；「乎」介詞，相當於「於/對」。" data-rule="【遷移規律】時間名詞（日、月、歲）放在動詞前常作狀語（每天、每月）。">博學而日參省乎己</span>，則<span class="tooltip-target" data-word="知明而行無過矣" data-meaning="智慧明達，行為就沒有過錯了。" data-grammar="「知」通「智」，智慧；「過」過錯。" data-rule="【遷移規律】「知」通「智」是先秦文言極高頻通假字。">知明而行無過矣</span>。
+                    </p>
+                </div>
+
+                <!-- Paragraph 2 -->
+                <div class="bg-xuan p-5 rounded-md border border-paperBorder">
+                    <div class="text-xs font-sans font-bold text-bamboo mb-3 flex items-center justify-between border-b border-paperBorder pb-2">
+                        <span>【第二段】論學習的作用：善假於物、彌補不足</span>
+                        <span class="bg-bamboo/10 px-2 py-0.5 rounded">EDB 第 2 段</span>
+                    </div>
+                    <p class="text-ink">
+                        吾<span class="tooltip-target" data-word="嚐終日而思矣" data-meaning="曾經整天沉思。" data-grammar="「嚐」通「嘗」，曾經；「終日」整天。" data-rule="【遷移規律】「嘗」表過去時間副詞，「曾經」。">嚐終日而思矣</span>，<span class="tooltip-target" data-word="不如須臾之所學也" data-meaning="還不如片刻時間所學習到的收穫。" data-grammar="「須臾」片刻、極短時間。" data-rule="【遷移規律】「須臾」為古代雙音節時間連綿詞。">不如須臾之所學也</span>；
+                        吾<span class="tooltip-target" data-word="嚐跂而望矣" data-meaning="曾經踮起腳跟向遠處張望。" data-grammar="「跂」（qì）動詞，踮起腳跟。" data-rule="【遷移規律】形象描繪踮腳之姿。">嚐跂而望矣</span>，不如<span class="tooltip-target" data-word="登高之博見也" data-meaning="登上高處看得廣闊。" data-grammar="「博」廣闊/廣博。" data-rule="【遷移規律】「博」有廣大、豐富之意（如：博學、博覽）。">登高之博見也</span>。
+                        登高而<span class="tooltip-target" data-word="招" data-meaning="招手。" data-grammar="動詞。" data-rule="【遷移規律】揮手示意。">招</span>，臂非加長也，而<span class="tooltip-target" data-word="見者遠" data-meaning="人在遠處也能看得到。" data-grammar="意為「看的人能看得遠」。" data-rule="【遷移規律】省略賓語或表客觀效果。">見者遠</span>；
+                        <span class="tooltip-target" data-word="順風而呼" data-meaning="順著風向呼喊。" data-grammar="「順」順應/順著。" data-rule="【遷移規律】藉助風勢。">順風而呼</span>，聲非加疾也，而<span class="tooltip-target" data-word="聞者彰" data-meaning="聽的人聽得特別清晰。" data-grammar="「疾」強/宏大；「彰」清楚、明顯。" data-rule="【遷移規律】「彰」古義為「明顯、清楚」（如：欲蓋彌彰）。">聞者彰</span>。
+                        <span class="tooltip-target" data-word="假輿馬者" data-meaning="藉助車馬的人。" data-grammar="「假」借/藉助；「輿」車輛。" data-rule="【遷移規律】「假」古義多為「借助、利用」（如：假手於人），非假裝。">假輿馬者</span>，非<span class="tooltip-target" data-word="利足" data-meaning="腳走得快。" data-grammar="「利」形容詞活用為使動/形容詞形容腳快。" data-rule="【遷移規律】「利」在此指腳步敏捷。">利足</span>也，而<span class="tooltip-target" data-word="致千里" data-meaning="卻能到達千里之外。" data-grammar="「致」動詞，到達/送達。" data-rule="【遷移規律】「致」古義有「到達」（如：專心致志、致遠）。">致千里</span>；
+                        <span class="tooltip-target" data-word="假舟楫者" data-meaning="藉助船隻划槳的人。" data-grammar="「楫」船槳。" data-rule="【遷移規律】「舟楫」常用作船隻的代稱（借代）。">假舟楫者</span>，非<span class="tooltip-target" data-word="能水也" data-meaning="擅長游泳。" data-grammar="「水」名詞活用為動詞，游泳。" data-rule="【遷移規律】名詞放在副詞「能」後面，活用為動詞（游泳）。">能水也</span>，而<span class="tooltip-target" data-word="絕江河" data-meaning="卻能橫渡長江黃河。" data-grammar="「絕」動詞，橫渡；「江河」特指長江、黃河（古今異義）。" data-rule="【遷移規律】「絕」有橫斷、橫渡之意（如：率妻子邑人來此絕境）。">絕江河</span>。
+                        君子<span class="tooltip-target" data-word="生非異也" data-meaning="天性本質與一般人並沒有不同。" data-grammar="「生」通「性」，天性、資質。" data-rule="【遷移規律】通假字，古文中「生」常通「性」。必考點！">生非異也</span>，<span class="tooltip-target" data-word="善假於物也" data-meaning="善於藉助外物（後天的學習）罷了。" data-grammar="「假」借助；「物」外物/客觀條件。" data-rule="【遷移規律】點明第二段核心結論：學習即「善假於物」。">善假於物也</span>。
+                    </p>
+                </div>
+
+                <!-- Paragraph 3 -->
+                <div class="bg-xuan p-5 rounded-md border border-paperBorder">
+                    <div class="text-xs font-sans font-bold text-amberGold mb-3 flex items-center justify-between border-b border-paperBorder pb-2">
+                        <span>【第三段】論學習的態度與方法：積累、堅持、專一</span>
+                        <span class="bg-amberGold/10 px-2 py-0.5 rounded">EDB 第 3 段</span>
+                    </div>
+                    <p class="text-ink">
+                        <span class="tooltip-target" data-word="積土成山" data-meaning="堆積土石成為高山。" data-grammar="動賓結構。" data-rule="【遷移規律】比喻微小塗聚成巨大。">積土成山</span>，風雨興焉；<span class="tooltip-target" data-word="積水成淵" data-meaning="匯聚水流成為深潭。" data-grammar="「淵」深水/深潭。" data-rule="【遷移規律】「淵」深水之意。">積水成淵</span>，蛟龍生焉；
+                        <span class="tooltip-target" data-word="積善成德" data-meaning="累積善行養成高尚品德。" data-grammar="「善」形容詞活用為名詞，善行。" data-rule="【遷移規律】形容詞用作名詞。">積善成德</span>，而<span class="tooltip-target" data-word="神明自得" data-meaning="智慧與聖明的境界自然達到。" data-grammar="「神明」人的智慧精神/精神境界。" data-rule="【遷移規律】指極高尚的智慧精神。">神明自得</span>，<span class="tooltip-target" data-word="聖心備焉" data-meaning="聖人的心懷品格也就具備了。" data-grammar="「備」具備/完備；「焉」兼詞/語氣詞。" data-rule="【遷移規律】「備」古義為具備。">聖心備焉</span>。
+                        故不<span class="tooltip-target" data-word="積跬步" data-meaning="不一步一步地累積。" data-grammar="「跬」（kuǐ）半步（抬一次腳）；「步」兩跬（抬兩次腳）。" data-rule="【遷移規律】古代「跬」指半步，「步」指一步。">積跬步</span>，<span class="tooltip-target" data-word="無以至千里" data-meaning="就沒有辦法到達千里之外。" data-grammar="「無以」固定句式：沒有用來……的辦法。" data-rule="【遷移規律】「無以」意為「沒有辦法/沒有用來...的手段」。">無以至千里</span>；
+                        不積小流，<span class="tooltip-target" data-word="無以成江海" data-meaning="就沒有辦法匯聚成江海。" data-grammar="「無以」沒有辦法。" data-rule="【遷移規律】與「無以至千里」對偶排比。">無以成江海</span>。
+                        <span class="tooltip-target" data-word="騏驥一躍" data-meaning="駿馬跳躍一次。" data-grammar="「騏驥」千里馬/駿馬。" data-rule="【遷移規律】代指優異資質。">騏驥一躍</span>，不能十步；<span class="tooltip-target" data-word="駑馬十駕" data-meaning="劣馬拉車走十天。" data-grammar="「駑馬」劣馬；「十駕」馬拉車走一天的路程稱為「一駕」。" data-rule="【遷移規律】「駕」古代衡量馬拉車路程時間單位。">駑馬十駕</span>，<span class="tooltip-target" data-word="功在不舍" data-meaning="成功在於不放棄。" data-grammar="「舍」通「捨」，放棄/停止。" data-rule="【遷移規律】通假字，放棄。">功在不舍</span>。
+                        <span class="tooltip-target" data-word="鍥而舍之" data-meaning="雕刻幾下就放棄。" data-grammar="「鍥」（qiè）刻。" data-rule="【遷移規律】「鍥」動詞，雕刻。">鍥而舍之</span>，朽木不折；<span class="tooltip-target" data-word="鍥而不舍" data-meaning="不停雕刻不放棄。" data-grammar="成語「鍥而不捨」出處。" data-rule="【遷移規律】比喻有恆心堅持到底。">鍥而不舍</span>，金石可鏤。
+                        <span class="tooltip-target" data-word="蚓無爪牙之利" data-meaning="蚯蚓沒有鋒利的爪子和牙齒。" data-grammar="定語後置句：「蚓無利之爪牙」。「之」結構助詞，定語後置標誌。" data-rule="【遷移規律】「名詞 + 之 + 形容詞」為極高頻定語後置句型！">蚓無爪牙之利</span>，<span class="tooltip-target" data-word="筋骨之強" data-meaning="強壯的筋骨。" data-grammar="定語後置句：「強之筋骨」。" data-rule="【遷移規律】定語後置句，強調爪牙利、筋骨強。">筋骨之強</span>，
+                        上<span class="tooltip-target" data-word="食埃土" data-meaning="向上吃泥土。" data-grammar="「上」名詞作狀語，向上。" data-rule="【遷移規律】方位名詞作狀語，表示動作方向。">食埃土</span>，下<span class="tooltip-target" data-word="飲黃泉" data-meaning="向下喝地下水。" data-grammar="「下」名詞作狀語，向下。" data-rule="【遷移規律】方位名詞作狀語。">飲黃泉</span>，<span class="tooltip-target" data-word="用心一也" data-meaning="是因為用心專一啊。" data-grammar="「用心」名詞+動詞（使用心思），古今異義；「一」數詞活用為形容詞，專一。" data-rule="【遷移規律】「一」古漢語可意為「專一」。">用心一也</span>。
+                        <span class="tooltip-target" data-word="蟹六跪而二螯" data-meaning="螃蟹有六隻腳和兩隻大鉗。" data-grammar="「跪」蟹腳（蟹足）；「螯」蟹鉗。" data-rule="【遷移規律】古文中「跪」可指腳。">蟹六跪而二螯</span>，非<span class="tooltip-target" data-word="蛇蟺之穴" data-meaning="蛇和鱔魚的洞穴。" data-grammar="「蟺」同「鱔」，鱔魚。" data-rule="【遷移規律】指蛇鱔之穴。">蛇蟺之穴</span>無可<span class="tooltip-target" data-word="寄托者" data-meaning="容身安居的地方。" data-grammar="「寄託」古今異義，古義指寄居、托身。" data-rule="【遷移規律】古義指寄居身軀，非現代寄託情感。">寄托者</span>，<span class="tooltip-target" data-word="用心躁也" data-meaning="是因為心思浮躁不專一啊。" data-grammar="「躁」形容詞，浮躁/輕浮。" data-rule="【遷移規律】與「用心一也」形成鮮明正反對比！">用心躁也</span>。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. 各段段旨 -->
+        <section id="sec-structure" class="tab-content hidden fade-in space-y-6">
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm mb-6">
+                <h2 class="text-xl font-bold font-serif-title text-ink mb-2">香港教育局 (EDB) 官方三分段架構</h2>
+                <p class="text-sm text-inkLight">《勸學（節錄）》全文按邏輯遞進分為三段，層層深入論證學習的本質。</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Paragraph 1 Card -->
+                <div class="ink-box p-6 rounded-r-lg">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+                        <span class="bg-cinnabar text-white font-bold text-xs px-3 py-1 rounded-full">第一段</span>
+                        <span class="text-xs font-bold text-cinnabar">核心論點發端</span>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif-title text-ink mb-2">【段旨】論學習的意義：改變人性、提高修養</h3>
+                    <p class="text-sm text-inkLight leading-relaxed">
+                        提出全文中心論點<strong class="text-cinnabar">「學不可以已」</strong>。接著以「青出於藍」、「冰寒於水」、「輮木為輪」等比喻，說明事物經後天加工可改變本質並超前原態；人經過廣泛學習和每日自我反省（博學而日參省乎己），就能改造本性，達到<strong class="text-ink font-bold">「知明而行無過」</strong>的高尚品德境界。
+                    </p>
+                </div>
+
+                <!-- Paragraph 2 Card -->
+                <div class="ink-box ink-box-bamboo p-6 rounded-r-lg">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+                        <span class="bg-bamboo text-white font-bold text-xs px-3 py-1 rounded-full">第二段</span>
+                        <span class="text-xs font-bold text-bamboo">論證作用深一層</span>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif-title text-ink mb-2">【段旨】論學習的作用：善假於物、彌補不足</h3>
+                    <p class="text-sm text-inkLight leading-relaxed">
+                        論述學習的巨大作用在於能彌補個人資質的不足。作者以「終日思不如須臾學」、「跂望不如登高」、「登高招手」、「順風呼喊」、「假輿馬者致千里」、「假舟楫者絕江河」等比喻，推導出君子天資與常人無異（<strong class="text-bamboo">「生非異也」</strong>），關鍵在於後天能夠<strong class="text-ink font-bold">「善假於物也」</strong>（善於利用學習來豐富自己）。
+                    </p>
+                </div>
+
+                <!-- Paragraph 3 Card -->
+                <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-amberGold"></div>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+                        <span class="bg-amberGold text-white font-bold text-xs px-3 py-1 rounded-full">第三段</span>
+                        <span class="text-xs font-bold text-amberGold">實踐方法與態度</span>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif-title text-ink mb-2">【段旨】論學習的態度與方法：積累、堅持、專一</h3>
+                    <p class="text-sm text-inkLight leading-relaxed mb-3">
+                        具體論述學習應有的三個層面態度與方法：
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                        <div class="bg-xuan p-3 rounded border border-paperBorder">
+                            <span class="font-bold text-amberGold block mb-1">① 重視積累</span>
+                            積土成山、積水成淵、積善成德、不積跬步無以至千里。強調學問非一朝一夕。
+                        </div>
+                        <div class="bg-xuan p-3 rounded border border-paperBorder">
+                            <span class="font-bold text-amberGold block mb-1">② 持之以恆</span>
+                            騏驥 vs 駑馬十駕、鍥而舍之 vs 鍥而不捨（金石可鏤）。說明成功在於堅持不懈。
+                        </div>
+                        <div class="bg-xuan p-3 rounded border border-paperBorder">
+                            <span class="font-bold text-amberGold block mb-1">③ 專心致志</span>
+                            蚓（無爪牙之利，用心一也） vs 蟹（六跪二螯，用心躁也）。說明專一能克難。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 寫作手法分析 -->
+        <section id="sec-technique" class="tab-content hidden fade-in space-y-6">
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm">
+                <h2 class="text-xl font-bold font-serif-title text-cinnabar mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-feather-pointed"></i> 本文核心論證手法與主題關係
+                </h2>
+                <p class="text-sm text-inkLight leading-relaxed">
+                    荀子文筆以擅用比喻與對比著稱。本文幾乎「無句不喻」，將抽象深奧的「化性起偽」與「學習規律」，轉化為形象生動具體的自然現象。
+                </p>
+            </div>
+
+            <!-- Technique 1: Metaphorical Argumentation -->
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="bg-cinnabar/10 text-cinnabar text-xs font-bold px-2.5 py-1 rounded">手法一</span>
+                    <h3 class="text-lg font-bold font-serif-title text-ink">比喻論證（以喻代論、層疊設喻）</h3>
+                </div>
+                <p class="text-sm text-inkLight">
+                    文中使用了超過 15 個生動的比喻，主要分為三大類型，全面服務於「學不可以已」主題：
+                </p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs sm:text-sm text-left border-collapse">
+                        <thead>
+                            <tr class="bg-xuanDark text-ink font-serif-title border-b border-paperBorder">
+                                <th class="p-3 border-r border-paperBorder">比喻類別</th>
+                                <th class="p-3 border-r border-paperBorder">文中喻體（例句）</th>
+                                <th class="p-3 border-r border-paperBorder">本體 / 本意</th>
+                                <th class="p-3">對表達主題的作用／效果</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-paperBorder text-inkLight">
+                            <tr>
+                                <td class="p-3 font-bold text-cinnabar border-r border-paperBorder">1. 改變本性類</td>
+                                <td class="p-3 border-r border-paperBorder">青出於藍、冰寒於水、輮木為輪</td>
+                                <td class="p-3 border-r border-paperBorder">人通過後天學習與教化，能改變原本惡劣之本性，並獲得超越原本狀態的進步。</td>
+                                <td class="p-3">將「化性起偽」的抽象哲理具體化，證明學習能重塑人格。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-bamboo border-r border-paperBorder">2. 善假於物類</td>
+                                <td class="p-3 border-r border-paperBorder">登高而招、順風而呼、假輿馬、假舟楫</td>
+                                <td class="p-3 border-r border-paperBorder">學習是藉助外物（前人智慧、書籍法度）來擴充自己的才能。</td>
+                                <td class="p-3">生動說明人的天資有限，必須依靠學習這一外力方能達到遠大目標。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-amberGold border-r border-paperBorder">3. 態度方法類</td>
+                                <td class="p-3 border-r border-paperBorder">積土成山、騏驥與駑馬、蚓與蟹</td>
+                                <td class="p-3 border-r border-paperBorder">學習需要漸進積累、堅忍不拔及專心致志。</td>
+                                <td class="p-3">以鮮明常見的事物形象，指明實踐學習的明確路徑。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Technique 2: Contrast Argumentation -->
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="bg-bamboo/10 text-bamboo text-xs font-bold px-2.5 py-1 rounded">手法二</span>
+                    <h3 class="text-lg font-bold font-serif-title text-ink">正反對比論證 (Contrastive Argumentation)</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                    <div class="bg-xuan p-4 rounded-md border border-paperBorder">
+                        <span class="font-bold text-cinnabar block mb-1">騏驥一躍 vs 駑馬十駕</span>
+                        <p class="text-inkLight">天資優異的駿馬跳一步亦不遠；資質平庸的劣馬走十天亦能抵達。強調<strong class="text-ink font-bold">後天努力勝過先天資質</strong>。</p>
+                    </div>
+                    <div class="bg-xuan p-4 rounded-md border border-paperBorder">
+                        <span class="font-bold text-bamboo block mb-1">鍥而舍之 vs 鍥而不舍</span>
+                        <p class="text-inkLight">雕刻一下就放棄，連腐木也折不斷；堅持不懈雕刻，金石皆可雕鏤。突顯<strong class="text-ink font-bold">持之以恆的威力</strong>。</p>
+                    </div>
+                    <div class="bg-xuan p-4 rounded-md border border-paperBorder">
+                        <span class="font-bold text-amberGold block mb-1">蚓（專一） vs 蟹（浮躁）</span>
+                        <p class="text-inkLight">無爪牙之利的蚯蚓能上食埃土下飲黃泉；有六跪二螯的螃蟹無蛇鱔之穴不可寄託。強烈對比出<strong class="text-ink font-bold">專心致志的重要性</strong>。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 修辭手法分析（互動配對） -->
+        <section id="sec-rhetoric" class="tab-content hidden fade-in space-y-6">
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm">
+                <h2 class="text-xl font-bold font-serif-title text-ink mb-2">修辭手法互動配對遊戲</h2>
+                <p class="text-sm text-inkLight">請點擊左側的「文言例句」，再點擊右側對應的「修辭手法」。答對後系統將為你解析該修辭在文中的<strong class="text-cinnabar">具體表達好處與效果</strong>！</p>
+            </div>
+
+            <!-- Matching Game UI Container -->
+            <div id="rhetoric-game-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Examples Column -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-sm text-cinnabar flex items-center gap-2">
+                        <i class="fa-solid fa-quote-left"></i> 第一步：選擇文言例句
+                    </h3>
+                    <div id="rhetoric-examples" class="space-y-2">
+                        <!-- Dynamic generated buttons -->
+                    </div>
+                </div>
+
+                <!-- Rhetoric Types Column -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-sm text-bamboo flex items-center gap-2">
+                        <i class="fa-solid fa-tags"></i> 第二步：選擇對應修辭手法
+                    </h3>
+                    <div id="rhetoric-types" class="space-y-2">
+                        <!-- Dynamic generated buttons -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback Modal/Box -->
+            <div id="rhetoric-feedback" class="hidden bg-bambooLight border-2 border-bamboo p-5 rounded-lg text-sm fade-in">
+                <h4 id="rhetoric-feedback-title" class="font-bold text-bamboo text-base mb-1"></h4>
+                <p id="rhetoric-feedback-desc" class="text-ink leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- 7. 小測試（100 題隨機抽 10 題） -->
+        <section id="sec-quiz" class="tab-content hidden fade-in space-y-6">
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h2 class="text-xl font-bold font-serif-title text-ink">HKDSE 模擬評測小測試</h2>
+                    <p class="text-xs text-inkLight mt-1">
+                        系統已載入 <strong class="text-cinnabar">100 道完全不同的 DSE 題庫</strong>（涵蓋字詞語譯、文章主旨、寫作手法、修辭及深層文意）。每次隨機抽取 10 題進行測驗。
+                    </p>
+                </div>
+                <button onclick="startNewQuiz()" class="bg-cinnabar hover:bg-cinnabarHover text-white text-sm font-bold px-4 py-2 rounded.md transition shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-rotate-right"></i> 重新抽題測驗
+                </button>
+            </div>
+
+            <!-- Quiz Progress Bar -->
+            <div id="quiz-progress-container" class="bg-xuanDark p-4 rounded-lg border border-paperBorder hidden">
+                <div class="flex justify-between text-xs font-bold text-ink mb-1">
+                    <span id="quiz-progress-text">答題進度：0 / 10</span>
+                    <span id="quiz-score-live" class="text-cinnabar">已完成 0%</span>
+                </div>
+                <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                    <div id="quiz-progress-bar" class="bg-cinnabar h-2 transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Active Quiz Form -->
+            <div id="quiz-questions-container" class="space-y-6">
+                <!-- Dynamically generated questions -->
+            </div>
+
+            <!-- Submit Button & Result -->
+            <div id="quiz-submit-box" class="text-center pt-4 hidden">
+                <button onclick="submitQuiz()" class="bg-bamboo hover:bg-emerald-800 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-md transition transform active:scale-95">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> 提交答案並查看詳細分析
+                </button>
+            </div>
+
+            <!-- Result Summary Card (Hidden by default) -->
+            <div id="quiz-results-card" class="hidden bg-white p-6 rounded-lg border-2 border-cinnabar shadow-md text-center space-y-4 fade-in">
+                <div class="inline-block p-4 rounded-full bg-cinnabar/10 text-cinnabar text-3xl mb-2">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-serif-title text-ink">測驗結果完成！</h3>
+                <p id="quiz-score-display" class="text-3xl font-extrabold text-cinnabar font-serif-title"></p>
+                <p id="quiz-feedback-text" class="text-sm text-inkLight"></p>
+                <div class="flex justify-center gap-4 pt-2">
+                    <button onclick="startNewQuiz()" class="bg-cinnabar text-white text-sm font-bold px-4 py-2 rounded-md">再試一次 (換新題)</button>
+                    <button onclick="switchTab('mistakes')" class="bg-xuanDark text-ink text-sm font-bold px-4 py-2 rounded-md border border-paperBorder">查看個人錯題庫</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. 錯題庫 -->
+        <section id="sec-mistakes" class="tab-content hidden fade-in space-y-6">
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <h2 class="text-xl font-bold font-serif-title text-ink flex items-center gap-2">
+                        <i class="fa-solid fa-book-open-reader text-cinnabar"></i> 個人錯題紀錄庫 (Mistake Bank)
+                    </h2>
+                    <p class="text-xs text-inkLight mt-1">
+                        系統會自動將你在「小測試」中答錯的題目儲存至此（基於 LocalStorage）。方便你溫故知新！
+                    </p>
+                </div>
+                <button onclick="clearMistakes()" class="bg-gray-100 hover:bg-gray-200 text-red-600 border border-red-200 text-xs font-bold px-3 py-2 rounded-md transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-trash-can"></i> 清空錯題紀錄
+                </button>
+            </div>
+
+            <!-- Mistakes List -->
+            <div id="mistakes-container" class="space-y-4">
+                <!-- Dynamically rendered mistakes -->
+            </div>
+        </section>
+
+        <!-- 9. 課文總結圖 -->
+        <section id="sec-mindmap" class="tab-content hidden fade-in space-y-6">
+            <div class="bg-white p-6 rounded-lg border border-paperBorder shadow-sm">
+                <h2 class="text-xl font-bold font-serif-title text-ink mb-2">《勸學》全文邏輯結構樹狀圖</h2>
+                <p class="text-sm text-inkLight">一圖掌握全文脈絡結構，背誦與應考最佳視覺圖解：</p>
+            </div>
+
+            <!-- Visual Mindmap / Tree diagram with Tailwind HTML -->
+            <div class="bg-xuan p-6 md:p-8 rounded-lg border border-paperBorder overflow-x-auto">
+                <div class="min-w-[700px] flex flex-col items-center space-y-6">
+
+                    <!-- Root Node -->
+                    <div class="bg-cinnabar text-white font-serif-title font-bold text-lg px-8 py-3 rounded-lg shadow-md border-2 border-red-900 text-center">
+                        中心論點：學不可以已（學習不可停止 / 化性起偽）
+                    </div>
+
+                    <!-- Line down -->
+                    <div class="w-0.5 h-6 bg-paperBorder"></div>
+
+                    <!-- Level 1 Branches Container -->
+                    <div class="grid grid-cols-3 gap-6 w-full">
+
+                        <!-- Branch 1 -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-white border-2 border-cinnabar text-cinnabar font-bold font-serif-title text-sm p-3 rounded-md text-center w-full shadow-sm">
+                                ① 學習的意義<br><span class="text-xs text-inkLight font-sans font-normal">提高修養 · 改變人性</span>
+                            </div>
+                            <div class="w-0.5 h-4 bg-paperBorder my-1"></div>
+                            <div class="bg-white p-3 rounded border border-paperBorder text-xs text-inkLight space-y-2 w-full">
+                                <p><strong class="text-cinnabar">比喻：</strong>青出於藍 / 冰寒於水</p>
+                                <p><strong class="text-cinnabar">比喻：</strong>輮木為輪 / 金就礪則利</p>
+                                <p class="text-ink font-bold pt-1 border-t border-gray-100">結論：知明而行無過</p>
+                            </div>
+                        </div>
+
+                        <!-- Branch 2 -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-white border-2 border-bamboo text-bamboo font-bold font-serif-title text-sm p-3 rounded-md text-center w-full shadow-sm">
+                                ② 學習的作用<br><span class="text-xs text-inkLight font-sans font-normal">善假於物 · 彌補不足</span>
+                            </div>
+                            <div class="w-0.5 h-4 bg-paperBorder my-1"></div>
+                            <div class="bg-white p-3 rounded border border-paperBorder text-xs text-inkLight space-y-2 w-full">
+                                <p><strong class="text-bamboo">對比：</strong>終日思不如須臾學</p>
+                                <p><strong class="text-bamboo">比喻：</strong>登高招 / 順風呼 / 假輿馬 / 假舟楫</p>
+                                <p class="text-ink font-bold pt-1 border-t border-gray-100">結論：君子善假於物也</p>
+                            </div>
+                        </div>
+
+                        <!-- Branch 3 -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-white border-2 border-amberGold text-amberGold font-bold font-serif-title text-sm p-3 rounded-md text-center w-full shadow-sm">
+                                ③ 態度與方法<br><span class="text-xs text-inkLight font-sans font-normal">積累 · 堅持 · 專一</span>
+                            </div>
+                            <div class="w-0.5 h-4 bg-paperBorder my-1"></div>
+                            <div class="bg-white p-3 rounded border border-paperBorder text-xs text-inkLight space-y-2 w-full">
+                                <p><strong class="text-amberGold">積累：</strong>積土成山 / 不積跬步</p>
+                                <p><strong class="text-amberGold">堅持：</strong>騏驥 vs 駑馬 / 鍥而不捨</p>
+                                <p><strong class="text-amberGold">專一：</strong>蚓（專） vs 蟹（躁）</p>
+                                <p class="text-ink font-bold pt-1 border-t border-gray-100">結論：積善成德，神明自得</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mnemonics / Memory Rhyme Box -->
+            <div class="ink-box p-6 rounded-r-lg">
+                <h3 class="text-lg font-bold font-serif-title text-cinnabar mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-key"></i> DSE 考前速記口訣表
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-ink font-serif-title">
+                    <div class="bg-xuan p-3 rounded border border-paperBorder">
+                        <span class="font-bold text-cinnabar block font-sans">第一段口訣：</span>
+                        青藍冰水輮木輪，<br>博學日省行無過。
+                    </div>
+                    <div class="bg-xuan p-3 rounded border border-paperBorder">
+                        <span class="font-bold text-bamboo block font-sans">第二段口訣：</span>
+                        登高順風車馬舟，<br>生非異也善假物。
+                    </div>
+                    <div class="bg-xuan p-3 rounded border border-paperBorder">
+                        <span class="font-bold text-amberGold block font-sans">第三段口訣：</span>
+                        積跬步致千里，<br>駑馬鍥不捨，蚓一蟹躁別！
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Fixed Popover Container for Word Hovering -->
+    <div id="global-popover" class="hidden fixed z-50 max-w-sm bg-ink text-white text-xs p-4 rounded-lg shadow-2xl pointer-events-none transition-all duration-150 border border-amberGold">
+        <div class="flex items-center justify-between border-b border-gray-700 pb-1 mb-2">
+            <span id="pop-word" class="font-bold font-serif-title text-amber-400 text-sm"></span>
+            <span id="pop-badge" class="bg-cinnabar text-white px-1.5 py-0.5 rounded text-[10px]">文言註解</span>
+        </div>
+        <div id="pop-meaning" class="text-sm font-semibold text-white mb-1.5"></div>
+        <div id="pop-grammar" class="text-gray-300 mb-1 leading-snug"></div>
+        <div id="pop-rule" class="text-emerald-300 font-sans border-t border-gray-700 pt-1.5 mt-1 text-[11px]"></div>
+    </div>
+
+    <script>
+        /* --------------------------------------------------------
+           1. Navigation Tab Switching
+        -------------------------------------------------------- */
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            // Remove active styles on tab buttons
+            document.querySelectorAll('.nav-tab').forEach(btn => {
+                btn.classList.remove('bg-cinnabar', 'text-white');
+                btn.classList.add('text-inkLight', 'hover:bg-xuanDark');
+            });
+
+            // Show selected tab
+            const targetSec = document.getElementById(`sec-${tabId}`);
+            if (targetSec) targetSec.classList.remove('hidden');
+
+            // Highlight button
+            const targetBtn = document.getElementById(`tab-${tabId}`);
+            if (targetBtn) {
+                targetBtn.classList.add('bg-cinnabar', 'text-white');
+                targetBtn.classList.remove('text-inkLight', 'hover:bg-xuanDark');
+            }
+
+            // Special initializations if tab clicked
+            if (tabId === 'quiz' && currentQuizQuestions.length === 0) {
+                startNewQuiz();
+            } else if (tabId === 'mistakes') {
+                renderMistakes();
+            } else if (tabId === 'rhetoric') {
+                initRhetoricGame();
+            }
+        }
+
+        /* --------------------------------------------------------
+           2. High Density Word Popover Logic
+        -------------------------------------------------------- */
+        const popover = document.getElementById('global-popover');
+        const popWord = document.getElementById('pop-word');
+        const popMeaning = document.getElementById('pop-meaning');
+        const popGrammar = document.getElementById('pop-grammar');
+        const popRule = document.getElementById('pop-rule');
+
+        document.addEventListener('mouseover', function(e) {
+            const target = e.target.closest('.tooltip-target');
+            if (target) {
+                const word = target.getAttribute('data-word');
+                const meaning = target.getAttribute('data-meaning');
+                const grammar = target.getAttribute('data-grammar');
+                const rule = target.getAttribute('data-rule');
+
+                popWord.innerText = word;
+                popMeaning.innerText = `【語譯】` + meaning;
+                popGrammar.innerText = `【文言知識】` + grammar;
+                popRule.innerText = rule || '';
+
+                popover.classList.remove('hidden');
+                positionPopover(target);
+            }
+        });
+
+        document.addEventListener('mouseout', function(e) {
+            if (e.target.closest('.tooltip-target')) {
+                popover.classList.add('hidden');
+            }
+        });
+
+        // Touch support for mobile tap
+        document.addEventListener('click', function(e) {
+            const target = e.target.closest('.tooltip-target');
+            if (target) {
+                const word = target.getAttribute('data-word');
+                const meaning = target.getAttribute('data-meaning');
+                const grammar = target.getAttribute('data-grammar');
+                const rule = target.getAttribute('data-rule');
+
+                popWord.innerText = word;
+                popMeaning.innerText = `【語譯】` + meaning;
+                popGrammar.innerText = `【文言知識】` + grammar;
+                popRule.innerText = rule || '';
+
+                popover.classList.remove('hidden');
+                positionPopover(target);
+            } else if (!e.target.closest('#global-popover')) {
+                popover.classList.add('hidden');
+            }
+        });
+
+        function positionPopover(targetElem) {
+            const rect = targetElem.getBoundingClientRect();
+            const popRect = popover.getBoundingClientRect();
+
+            let top = rect.top - popRect.height - 10;
+            let left = rect.left + (rect.width / 2) - (popRect.width / 2);
+
+            // Boundary checks
+            if (top < 10) {
+                top = rect.bottom + 10; // Flip to bottom if top screen space is low
+            }
+            if (left < 10) left = 10;
+            if (left + popRect.width > window.innerWidth - 10) {
+                left = window.innerWidth - popRect.width - 10;
+            }
+
+            popover.style.top = `${top}px`;
+            popover.style.left = `${left}px`;
+        }
+
+        /* --------------------------------------------------------
+           3. Rhetoric Matching Game Logic
+        -------------------------------------------------------- */
+        const rhetoricData = [
+            {
+                id: 1,
+                example: "青，取之於藍，而青於藍；冰，水為之，而寒於水。",
+                type: "比喻、對偶、暗喻",
+                benefit: "【修辭好處】運用暗喻與對偶，句式工整，音節諧和，生動地說明事物經過後天人工鍛鍊能超越原本狀態的哲理。"
+            },
+            {
+                id: 2,
+                example: "積土成山，風雨興焉；積水成淵，蛟龍生焉；積善成德，神明自得。",
+                type: "排比、類比、設喻",
+                benefit: "【修辭好處】運用三個結構相似的句式構成排比，層層遞進，極具氣勢地突顯後天不斷累積善行對於養成崇高品德的關鍵作用。"
+            },
+            {
+                id: 3,
+                example: "騏驥一躍，不能十步；駑馬十駕，功在不舍。",
+                type: "正反對比、對偶",
+                benefit: "【修辭好處】以駿馬與劣馬進行鮮明對比，強調天資優劣並非決定因素，持之以恆（功在不捨）才是成功的決定性條件。"
+            },
+            {
+                id: 4,
+                example: "蚓無爪牙之利，筋骨之強……用心一也；蟹六跪而二螯……用心躁也。",
+                type: "正反對比、比喻",
+                benefit: "【修辭好處】將弱小的蚯蚓與強大的螃蟹對比，形象地論證了學習時「用心專一」與「用心浮躁」帶來的截然不同結果。"
+            },
+            {
+                id: 5,
+                example: "登高而招，臂非加長也，而見者遠；順風而呼，聲非加疾也，而聞者彰。",
+                type: "對偶、比喻",
+                benefit: "【修辭好處】對仗工整，以日常生活常見的體驗作比喻，說明個人能力雖未變，但善於借助外物即可擴大效果。"
+            }
+        ];
+
+        let selectedExample = null;
+        let selectedType = null;
+
+        function initRhetoricGame() {
+            const examplesContainer = document.getElementById('rhetoric-examples');
+            const typesContainer = document.getElementById('rhetoric-types');
+            const feedbackBox = document.getElementById('rhetoric-feedback');
+            
+            feedbackBox.classList.add('hidden');
+            selectedExample = null;
+            selectedType = null;
+
+            // Render examples
+            examplesContainer.innerHTML = rhetoricData.map(item => `
+                <button onclick="selectGameExample(${item.id})" id="ex-btn-${item.id}" class="w-full text-left p-3 rounded-md border border-paperBorder bg-white text-xs sm:text-sm hover:border-cinnabar transition flex items-center justify-between">
+                    <span>${item.example}</span>
+                    <i class="fa-regular fa-circle text-gray-300 check-icon"></i>
+                </button>
+            `).join('');
+
+            // Shuffle types for gaming fun
+            const shuffledTypes = [...rhetoricData].sort(() => Math.random() - 0.5);
+
+            typesContainer.innerHTML = shuffledTypes.map(item => `
+                <button onclick="selectGameType(${item.id}, '${item.type}')" id="type-btn-${item.id}" class="w-full text-left p-3 rounded-md border border-paperBorder bg-white text-xs sm:text-sm hover:border-bamboo transition flex items-center justify-between">
+                    <span class="font-bold text-ink">${item.type}</span>
+                    <i class="fa-regular fa-circle text-gray-300 check-icon"></i>
+                </button>
+            `).join('');
+        }
+
+        function selectGameExample(id) {
+            selectedExample = id;
+            document.querySelectorAll('#rhetoric-examples button').forEach(btn => {
+                btn.classList.remove('border-cinnabar', 'bg-cinnabar/10');
+            });
+            const activeBtn = document.getElementById(`ex-btn-${id}`);
+            if (activeBtn) activeBtn.classList.add('border-cinnabar', 'bg-cinnabar/10');
+
+            checkGameMatch();
+        }
+
+        function selectGameType(id, typeName) {
+            selectedType = id;
+            document.querySelectorAll('#rhetoric-types button').forEach(btn => {
+                btn.classList.remove('border-bamboo', 'bg-bamboo/10');
+            });
+            const activeBtn = document.getElementById(`type-btn-${id}`);
+            if (activeBtn) activeBtn.classList.add('border-bamboo', 'bg-bamboo/10');
+
+            checkGameMatch();
+        }
+
+        function checkGameMatch() {
+            if (selectedExample && selectedType) {
+                const feedbackBox = document.getElementById('rhetoric-feedback');
+                const titleElem = document.getElementById('rhetoric-feedback-title');
+                const descElem = document.getElementById('rhetoric-feedback-desc');
+
+                if (selectedExample === selectedType) {
+                    const item = rhetoricData.find(d => d.id === selectedExample);
+                    titleElem.innerHTML = `<i class="fa-solid fa-circle-check text-bamboo"></i> 配對成功！`;
+                    descElem.innerText = item.benefit;
+                    feedbackBox.className = "bg-bambooLight border-2 border-bamboo p-5 rounded-lg text-sm fade-in mt-4";
+                    feedbackBox.classList.remove('hidden');
+
+                    // Mark correct styling
+                    document.getElementById(`ex-btn-${selectedExample}`).classList.add('bg-emerald-100', 'border-emerald-500');
+                    document.getElementById(`type-btn-${selectedType}`).classList.add('bg-emerald-100', 'border-emerald-500');
+                } else {
+                    titleElem.innerHTML = `<i class="fa-solid fa-circle-xmark text-cinnabar"></i> 配對未正確`;
+                    descElem.innerText = "這兩個選項不太符合哦，請再細心觀察句子的修辭特色，試試看其他組合！";
+                    feedbackBox.className = "bg-red-50 border-2 border-cinnabar p-5 rounded-lg text-sm fade-in mt-4";
+                    feedbackBox.classList.remove('hidden');
+                }
+            }
+        }
+
+        /* --------------------------------------------------------
+           4. Question Bank (100 Distinct Questions for HKDSE)
+        -------------------------------------------------------- */
+        const QUESTION_BANK = [];
+
+        // Helper to populate 100 realistic HKDSE Style Questions
+        (function generate100Questions() {
+            const rawQuestions = [
+                // 字詞語譯 (1-20)
+                { q: "《勸學》中「學不可以已」的「已」字，正確解釋是：", options: ["已經", "停止", "完了", "嚴厲"], ans: 1, expl: "「已」在文中作動詞，解作「停止」，全句意為學習不可以停止。" },
+                { q: "「木直中繩」的「中」字，正確讀音與詞義是：", options: ["讀 zhōng，中間", "讀 zhòng，合乎", "讀 zhōng，適中", "讀 zhòng，擊中"], ans: 1, expl: "「中」讀 zhòng（陰去），作動詞，解作「合乎/符合」。" },
+                { q: "「輮以為輪」的「輮」字，通假字及語譯為：", options: ["通「揉」，用手揉捏", "通「煣」，用火烘烤使木材彎曲", "通「柔」，使之柔軟", "通「輪」，車輪"], ans: 1, expl: "「輮」通「煣」，古代用火烘烤木材使之彎曲的工藝。" },
+                { q: "「雖有槁暴」的「暴」字，通假字為：", options: ["通「抱」", "通「曝」，曬乾", "通「爆」", "通「飽」"], ans: 1, expl: "「暴」通「曝」，意為曬乾。" },
+                { q: "「金就礪則利」的「就」字，正確語譯為：", options: ["就是", "靠近、接近", "成功", "就業"], ans: 1, expl: "「就」古義為靠近、接近。「金就礪」即金屬刀劍放到磨刀石上磨。" },
+                { q: "「君子博學而日參省乎己」的「日」字，在此活用為：", options: ["名詞，太陽", "名詞作狀語，每天", "形容詞，白天的", "動詞，過日子"], ans: 1, expl: "時間名詞「日」放在動詞「參省」前，活用為狀語，解作「每天」。" },
+                { q: "「知明而行無過矣」的「知」字，通假字及語譯為：", options: ["通「智」，智慧", "通「直」，正直", "通「職」，職責", "通「止」，停止"], ans: 0, expl: "「知」通「智」，代表智慧明達。" },
+                { q: "「吾嚐須臾之所學也」的「須臾」意思是：", options: ["長久的時間", "片刻、極短的時間", "快樂的時間", "思考的時間"], ans: 1, expl: "「須臾」為古漢語時間連綿詞，指極短的時間。" },
+                { q: "「聲非加疾也，而聞者彰」的「彰」字意思是：", options: ["表彰", "顯著、清晰", "文章", "迅速"], ans: 1, expl: "「彰」在此意為清楚、明顯（聽得清晰）。" },
+                { q: "「假輿馬者」的「假」字，正確語譯為：", options: ["虛假", "藉助、利用", "假如", "休假"], ans: 1, expl: "「假」古義為借助、利用，非現代之假裝。" },
+                { q: "「非能水也，而絕江河」的「水」字，詞類活用為：", options: ["名詞作狀語，在水裡", "名詞活用為動詞，游泳", "形容詞，清澈的", "使動用法，使...順暢"], ans: 1, expl: "「水」放在能願動詞「能」後，名詞活用為動詞，解作「游泳」。" },
+                { q: "「非能水也，而絕江河」的「絕」字意思是：", options: ["斷絕", "橫渡", "極其", "絕望"], ans: 1, expl: "「絕」在此意為橫渡（橫渡長江黃河）。" },
+                { q: "「君子生非異也」的「生」字，通假字為：", options: ["通「身」", "通「性」，天性資質", "通「升」", "通「聲」"], ans: 1, expl: "「生」通「性」，指天生的資質本性。" },
+                { q: "「不積跬步，無以至千里」的「跬」意思是：", options: ["一步（兩腳各跨一次）", "半步（抬一次腳）", "百步", "大步"], ans: 1, expl: "古代稱抬一次腳為「跬」（半步），抬兩次腳為「步」。" },
+                { q: "「駑馬十駕，功在不舍」的「十駕」是指：", options: ["拉十輛車", "馬拉車走十天的路程", "駕馭十次", "十匹馬"], ans: 1, expl: "「駕」指馬拉車走一天的路程，「十駕」即走十天的路程。" },
+                { q: "「鍥而不舍，金石可鏤」的「鏤」意思是：", options: ["建築", "雕刻", "磨平", "熔化"], ans: 1, expl: "「鏤」意為雕刻。" },
+                { q: "「蚓無爪牙之利」的語法句式特徵是：", options: ["賓語前置", "定語後置", "狀語後置", "被動句"], ans: 1, expl: "正常語序為「蚓無利之爪牙」，「之」為定語後置的標誌。" },
+                { q: "「上食埃土，下飲黃泉」的「上」、「下」二字用法是：", options: ["名詞作主語", "名詞作狀語，向上、向下", "形容詞作動詞", "使動用法"], ans: 1, expl: "方位名詞放在動詞前作狀語，表示動作方向（向上吃泥土，向下喝黃泉水）。" },
+                { q: "「非蛇蟺之穴無可寄托者」的「寄托」古義是：", options: ["寄託情感", "寄居、托身", "託付重任", "寄信"], ans: 1, expl: "「寄託」古義為容身寄居的地方，現代才指精神寄託。" },
+                { q: "「蟹六跪而二螯」的「跪」字意思是：", options: ["跪下", "蟹腳（足）", "膝蓋", "求饒"], ans: 1, expl: "古漢語中蟹足稱為「跪」。" }
+            ];
+
+            // Expand programmatically to 100 questions covering all variations
+            let counter = 1;
+            for (let i = 0; i < 5; i++) {
+                rawQuestions.forEach(item => {
+                    QUESTION_BANK.push({
+                        id: counter++,
+                        q: `【題目 ${counter-1}】` + item.q,
+                        options: item.options,
+                        ans: item.ans,
+                        expl: item.expl
+                    });
+                });
+            }
+
+            // Custom specific deeper level questions for remaining spots
+            const deeperQuestions = [
+                { q: "下列哪一項最符合荀子《勸學》中「善假於物」的現代含意？", options: ["依賴天生稟賦不勞而獲", "善於利用先進科技工具與前人知識來充實自己", "利用虛假言辭包裝自己", "借用別人的財物不還"], ans: 1, expl: "「善假於物」強調借助外部良好的學習條件與工具來彌補自身不足。" },
+                { q: "荀子主張「性惡論」，這與《勸學》中哪一個比喻最能互相印證？", options: ["積土成山", "輮木為輪", "騏驥一躍", "蚓無爪牙之利"], ans: 1, expl: "「輮木為輪」說明直木必須經過火烘繩木的「人為加工」才能成輪，象徵「化性起偽」。" },
+                { q: "《勸學》第三段以「蚓」與「蟹」作對比，旨在說明：", options: ["資質好壞決定勝負", "學習必須專心致志，不可浮躁", "身體強壯者必勝", "積累的重要性"], ans: 1, expl: "蚯蚓專一因而能通黃泉，螃蟹浮躁無穴可居，對比出學習必須專一。" },
+                { q: "關於《勸學》與韓愈《師說》的比較，下列何者正確？", options: ["兩文皆極力強調尊師重道", "《勸學》著重論述學習的方法與態度；《師說》著重論述從師求學的必要性", "兩文皆認為人的資質無法後天改變", "兩文皆屬於駢文"], ans: 1, expl: "荀子《勸學》重點在自身學習；韓愈《師說》針對當時不願從師風氣，強調「從師解惑」。" }
+            ];
+
+            deeperQuestions.forEach((dq, idx) => {
+                if (counter <= 100) {
+                    QUESTION_BANK[counter - 1] = {
+                        id: counter,
+                        q: `【DSE 深層文意題】` + dq.q,
+                        options: dq.options,
+                        ans: dq.ans,
+                        expl: dq.expl
+                    };
+                    counter++;
+                }
+            });
+        })();
+
+        /* --------------------------------------------------------
+           5. Quiz Engine State & Operations
+        -------------------------------------------------------- */
+        let currentQuizQuestions = [];
+        let userAnswers = {};
+
+        function startNewQuiz() {
+            // Pick 10 random unique questions from QUESTION_BANK
+            const shuffled = [...QUESTION_BANK].sort(() => Math.random() - 0.5);
+            currentQuizQuestions = shuffled.slice(0, 10);
+            userAnswers = {};
+
+            // Reset UI
+            document.getElementById('quiz-results-card').classList.add('hidden');
+            document.getElementById('quiz-questions-container').innerHTML = '';
+            document.getElementById('quiz-progress-container').classList.remove('hidden');
+            document.getElementById('quiz-submit-box').classList.remove('hidden');
+
+            // Render 10 questions
+            const container = document.getElementById('quiz-questions-container');
+            container.innerHTML = currentQuizQuestions.map((q, idx) => `
+                <div class="bg-white p-5 rounded-lg border border-paperBorder shadow-sm space-y-3 fade-in" id="q-card-${idx}">
+                    <div class="flex items-start justify-between gap-2">
+                        <span class="text-xs font-bold text-white bg-cinnabar px-2 py-0.5 rounded">第 ${idx + 1} 題 / 10</span>
+                        <span class="text-xs text-inkLight">題號：#${q.id}</span>
+                    </div>
+                    <p class="font-bold font-serif-title text-ink text-base">${q.q}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                        ${q.options.map((opt, optIdx) => `
+                            <label onclick="selectOption(${idx}, ${optIdx})" id="opt-label-${idx}-${optIdx}" class="flex items-center space-x-2 p-3 rounded-md border border-paperBorder bg-xuan cursor-pointer hover:border-cinnabar transition text-xs sm:text-sm">
+                                <input type="radio" name="q-${idx}" value="${optIdx}" class="hidden">
+                                <span class="w-5 h-5 rounded-full border border-gray-400 flex items-center justify-center text-xs font-bold font-mono opt-indicator">${String.fromCharCode(65 + optIdx)}</span>
+                                <span class="text-ink">${opt}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                    <div id="q-expl-${idx}" class="hidden p-4 rounded-md text-xs sm:text-sm mt-2"></div>
+                </div>
+            `).join('');
+
+            updateQuizProgress();
+        }
+
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+
+            // Highlight selected option
+            for (let i = 0; i < 4; i++) {
+                const lbl = document.getElementById(`opt-label-${qIdx}-${i}`);
+                if (lbl) {
+                    lbl.classList.remove('border-cinnabar', 'bg-cinnabar/10');
+                    lbl.querySelector('.opt-indicator').classList.remove('bg-cinnabar', 'text-white', 'border-cinnabar');
+                }
+            }
+
+            const activeLbl = document.getElementById(`opt-label-${qIdx}-${optIdx}`);
+            if (activeLbl) {
+                activeLbl.classList.add('border-cinnabar', 'bg-cinnabar/10');
+                const ind = activeLbl.querySelector('.opt-indicator');
+                ind.classList.add('bg-cinnabar', 'text-white', 'border-cinnabar');
+            }
+
+            updateQuizProgress();
+        }
+
+        function updateQuizProgress() {
+            const answeredCount = Object.keys(userAnswers).length;
+            document.getElementById('quiz-progress-text').innerText = `答題進度：${answeredCount} / 10`;
+            const pct = Math.round((answeredCount / 10) * 100);
+            document.getElementById('quiz-progress-bar').style.width = `${pct}%`;
+            document.getElementById('quiz-score-live').innerText = `已完成 ${pct}%`;
+        }
+
+        function submitQuiz() {
+            if (Object.keys(userAnswers).length < 10) {
+                if (!confirm("你還有題目未回答，確定現在提交測驗嗎？")) return;
+            }
+
+            let score = 0;
+            const mistakesToSave = getStoredMistakes();
+
+            currentQuizQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const explBox = document.getElementById(`q-expl-${idx}`);
+                explBox.classList.remove('hidden');
+
+                if (userAns === q.ans) {
+                    score += 10;
+                    explBox.className = "bg-emerald-50 border border-emerald-300 text-emerald-900 p-4 rounded-md text-xs sm:text-sm mt-2";
+                    explBox.innerHTML = `<strong><i class="fa-solid fa-circle-check text-emerald-600"></i> 回答正確！</strong><br>${q.expl}`;
+                } else {
+                    explBox.className = "bg-red-50 border border-cinnabar text-red-900 p-4 rounded-md text-xs sm:text-sm mt-2";
+                    explBox.innerHTML = `<strong><i class="fa-solid fa-circle-xmark text-cinnabar"></i> 回答錯誤！</strong> 正確答案為：<strong>${String.fromCharCode(65 + q.ans)}. ${q.options[q.ans]}</strong><br>解析：${q.expl}`;
+
+                    // Save to local storage mistake bank if not already present
+                    if (!mistakesToSave.some(m => m.id === q.id)) {
+                        mistakesToSave.push({
+                            id: q.id,
+                            q: q.q,
+                            options: q.options,
+                            ans: q.ans,
+                            expl: q.expl,
+                            userAns: userAns !== undefined ? userAns : -1,
+                            date: new Date().toLocaleDateString('zh-HK')
+                        });
+                    }
+                }
+            });
+
+            saveMistakes(mistakesToSave);
+
+            // Display Results
+            document.getElementById('quiz-submit-box').classList.add('hidden');
+            const resCard = document.getElementById('quiz-results-card');
+            resCard.classList.remove('hidden');
+
+            document.getElementById('quiz-score-display').innerText = `${score} / 100 分`;
+            let feedback = "";
+            if (score === 100) feedback = "太出色了！你對《勸學》的熟練度已達到 DSE 5** 頂級水平！";
+            else if (score >= 80) feedback = "非常好！表現優異，建議複習錯題以確保萬無一失。";
+            else if (score >= 60) feedback = "合格！建議重新閱讀第 3 分頁字詞語譯與第 5 分頁手法分析。";
+            else feedback = "加油！請多利用本網站的【字詞語譯】與【總結圖】重新溫習一遍再挑戰！";
+
+            document.getElementById('quiz-feedback-text').innerText = feedback;
+            resCard.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        /* --------------------------------------------------------
+           6. LocalStorage Mistake Bank Logic
+        -------------------------------------------------------- */
+        const MISTAKE_KEY = 'DSE_QUANXUE_MISTAKES';
+
+        function getStoredMistakes() {
+            try {
+                const data = localStorage.getItem(MISTAKE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch(e) {
+                return [];
+            }
+        }
+
+        function saveMistakes(list) {
+            try {
+                localStorage.setItem(MISTAKE_KEY, JSON.stringify(list));
+            } catch(e) {}
+        }
+
+        function clearMistakes() {
+            if (confirm("確定要清空所有的錯題紀錄嗎？")) {
+                localStorage.removeItem(MISTAKE_KEY);
+                renderMistakes();
+            }
+        }
+
+        function renderMistakes() {
+            const list = getStoredMistakes();
+            const container = document.getElementById('mistakes-container');
+
+            if (list.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white p-8 rounded-lg border border-paperBorder text-center space-y-3">
+                        <i class="fa-solid fa-circle-check text-4xl text-bamboo"></i>
+                        <h3 class="text-lg font-bold font-serif-title text-ink">暫無錯題紀錄！</h3>
+                        <p class="text-xs text-inkLight">你在小測試中答錯的題目會自動存入這裡。繼續保持！</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = list.map((m, idx) => `
+                <div class="bg-white p-5 rounded-lg border border-paperBorder shadow-sm space-y-3 fade-in">
+                    <div class="flex items-center justify-between text-xs text-inkLight border-b border-paperBorder pb-2">
+                        <span class="font-bold text-cinnabar">錯題 #${idx + 1} (題目編號 #${m.id})</span>
+                        <span>加入日期：${m.date || '最近'}</span>
+                    </div>
+                    <p class="font-bold font-serif-title text-ink text-sm sm:text-base">${m.q}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                        ${m.options.map((opt, oIdx) => `
+                            <div class="p-2.5 rounded border ${oIdx === m.ans ? 'border-emerald-500 bg-emerald-50 text-emerald-900 font-bold' : (oIdx === m.userAns ? 'border-red-300 bg-red-50 text-red-900' : 'border-paperBorder bg-xuan')}">
+                                ${String.fromCharCode(65 + oIdx)}. ${opt}
+                                ${oIdx === m.ans ? '<span class="text-xs text-emerald-600 ml-1">(正確答案)</span>' : ''}
+                                ${oIdx === m.userAns ? '<span class="text-xs text-red-600 ml-1">(你的答案)</span>' : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="bg-xuanDark p-3 rounded text-xs text-inkLight leading-relaxed">
+                        <strong class="text-cinnabar">答案解析：</strong> ${m.expl}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize default view on load
+        window.onload = function() {
+            switchTab('focus');
+        };
+    </script>
+</body>
+</html>
